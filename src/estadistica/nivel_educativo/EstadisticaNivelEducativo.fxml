@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="1029.0" stylesheets="@estadisticaNivelEducativo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estadistica.nivel_educativo.EstadisticaNivelEducativoControler">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="198.0" layoutY="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <BorderPane id="borderPaneGraficaProvincia" prefHeight="200.0" prefWidth="200.0">
+                                 <top>
+                                    <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal111" prefHeight="25.0" prefWidth="847.0" style="-fx-background-color: #116ec1;" BorderPane.alignment="CENTER">
+                                       <left>
+                                          <Label text="Nivel Educativo" textFill="WHITE" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Cambria Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </left>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                       <right>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="358.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Graficar entre " textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Cambria Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="textFieldEdadMenor" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" promptText="Edad menor" text="0" />
+                                                <Label text=" y " textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Cambria Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="textFieldEdadMayor" alignment="CENTER" prefHeight="25.0" prefWidth="87.0" promptText="Edad mayor" text="150" />
+                                                <JFXButton fx:id="jFXButtonBuscar" contentDisplay="CENTER" prefHeight="23.0" prefWidth="33.0" text="." textAlignment="CENTER" textFill="WHITE">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="19" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="1.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </right>
+                                    </BorderPane>
+                                 </top>
+                                 <center>
+                                    <ScrollPane id="scrollPaneGraficaProvincia" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <content>
+                                          <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <AnchorPane fx:id="anchorPaneConenedorGrafico" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <BarChart fx:id="barChartNivelEducativo" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <xAxis>
+                                                          <CategoryAxis fx:id="categoryAxisNivelEducativo" side="BOTTOM" />
+                                                        </xAxis>
+                                                        <yAxis>
+                                                          <NumberAxis fx:id="numberAxisNivelEducativo" side="LEFT" />
+                                                        </yAxis>
+                                                      </BarChart>
+                                                      <Label fx:id="labelInformacionNivelEducativo" alignment="CENTER" prefHeight="56.0" prefWidth="101.0" style="-fx-background-color: rgba(0,0,0,0.6); -fx-background-radius: 10; -fx-border-width:: 5;" text="Label" textFill="WHITE" wrapText="true">
+                                                         <font>
+                                                            <Font name="Arial" size="19.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                             </center>
+                                          </BorderPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </center>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

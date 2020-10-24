@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="711.0" stylesheets="@personalInterfaz.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estadistica.EstadisticaControler">
+   <top>
+      <BorderPane prefHeight="50.0" prefWidth="711.0" BorderPane.alignment="CENTER">
+         <left>
+            <Label id="labelOpcionSeleccionada" fx:id="labelOpcionSeleccionada" text="Label" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <HBox alignment="TOP_RIGHT" prefHeight="64.0" prefWidth="224.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuButton id="menuButtonGraficaDe" fx:id="menuButtonGraficaDe" mnemonicParsing="false" stylesheets="@registroInterfaz.css" textFill="WHITE">
+                    <items>
+                      <MenuItem fx:id="menuItemProvinciaDistrito" mnemonicParsing="false" text="Provincia y Distrito" />
+                      <MenuItem fx:id="menuItemEdad_Genero" mnemonicParsing="false" text="Edad y Género" />
+                        <MenuItem fx:id="menuItemTipoDiscapacidad" mnemonicParsing="false" text="Tipo de Discapacidad y Nivel de Gravedad" />
+                        <MenuItem fx:id="menuItemTipoProgramaSocial_ClasificacionSisfoh" mnemonicParsing="false" text="Programa Social y Clasificación Sisfoh" />
+                        <MenuItem fx:id="menuItemNivelEducativo" mnemonicParsing="false" text="Nivel Educativo" />
+                        <MenuItem fx:id="menuItemTipoTrabajo" mnemonicParsing="false" text="Tipo de Trabajo" />
+                        <MenuItem fx:id="menuItemBusquedaPersonalizada" mnemonicParsing="false" text="Busqueda Personalizada" />
+                        <MenuItem fx:id="menuItemBusquedaAvanzada" mnemonicParsing="false" text="Busqueda Avanzada" />
+                    </items>
+                     <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="9.0" prefWidth="192.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="30" wrappingWidth="44.571428298950195" />
+                              <Label text="Estadística por" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </MenuButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="6.0" top="6.0" />
+               </BorderPane.margin>
+            </HBox>
+         </right>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane id="borderPane_ventanaInterna" fx:id="borderPane_ventanaInterna" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></BorderPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,206 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.tooltip {
+    -fx-background: rgba(30,30,30);
+    -fx-text-fill: white;
+    -fx-background-color: rgba(30,30,30,0.8);
+    -fx-background-radius: 6px;
+    -fx-background-insets: 0;
+    -fx-padding: 0.667em 0.75em 0.667em 0.75em; /* 10px */
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 0 , 3 );
+    -fx-font-size: 0.85em;
+}
+
+
+
+.error_check {
+    -fx-focus-color: #d35244;
+    -fx-faint-focus-color: #d3524422;
+
+    -fx-highlight-fill: -fx-accent;
+    -fx-highlight-text-fill: white;
+    -fx-background-color:
+        -fx-focus-color,
+        -fx-control-inner-background,
+        -fx-faint-focus-color,
+        linear-gradient(from 5px 5px to 5px 10px, derive(-fx-control-inner-background, -50%), -fx-control-inner-background);
+    -fx-background-insets: -0.8, 1, -1.9, 9;
+    -fx-background-radius: 5, 5, 5, 5;
+    -fx-prompt-text-fill: transparent;
+
+}
+.error {
+    -fx-focus-color: #d35244;
+    -fx-faint-focus-color: #d3524422;
+
+    -fx-highlight-fill: -fx-accent;
+    -fx-highlight-text-fill: white;
+    -fx-background-color:
+        -fx-focus-color,
+        -fx-control-inner-background,
+        -fx-faint-focus-color,
+        linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-background-insets: -0.2, 1, -1.4, 3;
+    -fx-background-radius: 3, 2, 4, 0;
+    -fx-prompt-text-fill: transparent;
+}
+/* 
+#labelInformacion{
+	-fx-font-family: "Arial";
+	 -fx-font-size: 17px;
+   	 -fx-font-weight: bold;
+	-fx-background-color: rgba(93, 194, 252 , 0.30);
+	-fx-background-radius: 3 3 3 3;
+	
+}*/
+
+
+
+.labelInformacioncorrecto{
+	-fx-font-family: "Arial";
+	-fx-text-fill: #25b2f8;
+	 -fx-font-size: 17px;
+   	 -fx-font-weight: bold;
+	-fx-background-color: rgba(93, 194, 252 , 0.30);
+	-fx-background-radius: 3 3 3 3;
+	
+}
+
+.labelInformacionincorrecto{
+	-fx-font-family: "Arial";
+	 -fx-font-size: 17px;
+	 -fx-text-fill: #FF0000;
+   	 -fx-font-weight: bold;
+	-fx-background-color: rgba(250, 43, 43 , 0.30);
+	-fx-background-radius: 3 3 3 3;	
+}
+
+
+
+#gridPaneDatosPersonales, #gridPaneDatosDomicilio, #gridPaneDatosCertificacion,
+ #gridPaneDatosDiscapacidad, #gridPaneInscripcionConadis{
+ 	/*
+ 	-fx-border-color: #405DFF;
+                -fx-border-insets: 5;
+                -fx-border-width: 1;
+               */
+ 	
+	-fx-background-color: #F2F2F2;
+	-fx-background-radius:3;
+    -fx-effect:  dropshadow(three-pass-box, rgba(96, 96, 96,0.5), 2, 0, 1, 1);
+}
+
+#anchorPaneModalNuevoRegistroPD{
+	-fx-background-color: #eeeeee;
+	-fx-background-radius:3;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0.0,0.9), 15, 0, 3, 3);
+}
+
+#borderPaneTituloNuevoRegistroPD{
+	-fx-background-color:  #1080e5;
+	 -fx-background-radius: 3 3 0 0;
+  	 -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0.0,0.7), 2, 0, 0, 0);
+	
+}
+
+#buttonClose{
+	-fx-background-color:  #1080e5;
+	 -fx-font: 12px "Cambria";
+}
+
+#labelTituloNuevoRegistroPD{
+	-fx-font-family: "Cambria";
+	 -fx-font-size: 14px;
+   	 -fx-font-weight: bold;
+   	 -fx-text-fill: white;
+}
+
+.label{
+		-fx-font-family: "Arial";
+	    /*-fx-font-size: 13px;
+    -fx-font-weight: bold;*/
+}
+#anchorPaneModalNuevoPersonal{
+	-fx-background-color: #eeeeee;
+	-fx-background-radius:3;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0.0,0.9), 15, 0, 3, 3);
+}
+
+#borderPaneNuevoPersonal{
+	-fx-background-color:  #1080e5;
+	 -fx-background-radius: 3 3 0 0;
+  	 -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0.0,0.7), 2, 0, 0, 0);
+	
+}
+
+#jFXButtonClose{
+	-fx-font: 14px "Cambria";
+	-fx-text-fill: white;
+}
+
+#jFXButtonClose:hover{
+	-fx-font: 15px "Cambria";
+	-fx-cursor: hand;
+}
+
+
+#buttonCancelar{
+	-fx-font-family: "Arial";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+	-fx-background-color: f44336;
+	-fx-text-fill: #FFFFFF;
+	
+}
+
+#buttonCancelar:hover{
+		-fx-cursor: hand;
+		-fx-background-color: #da190b;
+}
+#buttonValidar:hover{
+	-fx-cursor: hand; 
+	-fx-background-color: #0b7dda
+}
+#buttonValidar{
+	-fx-font-family: "Arial";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+	-fx-background-color: #2196F3;
+	-fx-text-fill: #FFFFFF;
+}
+
+
+
+#toggleButtonInscripcionConadis, #toggleButtonDatosPersonal,#toggleButtonDatosDomicilio,#toggleButtonDatosDiscapacidadCertificadoMedico,
+#toggleButtonResolucionDiscapacidad{
+	
+	-fx-border-width: 0px 0px 2px 0px;
+	-fx-border-color:  #116ec1;
+	-fx-border-radius: 0px;
+	-fx-background-radius: 0px;
+	-fx-background-color: transparent ;
+	-fx-cursor: hand;
+	-fx-padding: 30px 15px 10px 15px;
+	-fx-font-weight:700;
+	-fx-font-size: 12px;
+	-fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+	-fx-text-fill: #116ec1;
+}
+#toggleButtonInscripcionConadis:hover,#toggleButtonDatosPersonal:hover,#toggleButtonDatosDomicilio:hover,#toggleButtonDatosDiscapacidadCertificadoMedico:hover,
+#toggleButtonResolucionDiscapacidad:hover{
+	-fx-border-width: 0px 0px 3px 0px;
+	
+}
+#toggleButtonInscripcionConadis:selected,#toggleButtonDatosPersonal:selected, #toggleButtonDatosDomicilio:selected, #toggleButtonDatosDiscapacidadCertificadoMedico:selected,
+#toggleButtonResolucionDiscapacidad:selected{
+	-fx-background-color: #116ec1;
+	-fx-border-color: #D7D7D7;
+	-fx-border-width: 0.0px 0px 3px 0px;
+	-fx-text-fill: white;
+}
+
+
+
+#scrollPaneDatosDiscapacidadCertificadoMedico,#scrollPaneDatosPersonales{
+
+}

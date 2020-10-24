@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="1029.0" stylesheets="@estadisticaEdadSexo.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estadistica.edad_sexo.EstadisticaEdadSexoControler">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="198.0" layoutY="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <BorderPane id="borderPaneGraficaProvincia" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <top>
+                                    <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal11" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+                                       <left>
+                                          <Label text="Distrito" textFill="WHITE" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Cambria Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </left>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </BorderPane>
+                                 </top>
+                                 <center>
+                                    <ScrollPane id="scrollPaneGraficaProvincia" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <content>
+                                          <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <StackedBarChart fx:id="stackedBarChartDistritos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <xAxis>
+                                                          <CategoryAxis side="BOTTOM" />
+                                                        </xAxis>
+                                                        <yAxis>
+                                                          <NumberAxis side="LEFT" />
+                                                        </yAxis>
+                                                      </StackedBarChart>
+                                                      <Label fx:id="labelInformacionEstadisticaDistritos" alignment="CENTER" prefHeight="56.0" prefWidth="101.0" style="-fx-background-color: rgba(0,0,0,0.6); -fx-background-radius: 10;" text="Label" textFill="WHITE" wrapText="true">
+                                                         <font>
+                                                            <Font name="Arial Narrow" size="21.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                             </center>
+                                          </BorderPane>
+                                       </content></ScrollPane>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane id="borderPaneGraficaProvincia" prefHeight="200.0" prefWidth="200.0">
+                                 <top>
+                                    <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal111" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+                                       <left>
+                                          <Label text="Provincia" textFill="WHITE" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Cambria Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </left>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </BorderPane>
+                                 </top>
+                                 <center>
+                                    <ScrollPane id="scrollPaneGraficaProvincia" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <content>
+                                          <BorderPane fx:id="borderPaneContenedorPiechart" prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <PieChart fx:id="pieChartEdad" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <Label fx:id="labelInformacionEstadistica" alignment="CENTER" prefHeight="56.0" prefWidth="101.0" style="-fx-background-color: rgba(0,0,0,0.6); -fx-background-radius: 10;" text="Label" textFill="WHITE" visible="false" wrapText="true">
+                                                         <font>
+                                                            <Font name="Arial Narrow" size="21.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                             </center>
+                                          </BorderPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </center>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

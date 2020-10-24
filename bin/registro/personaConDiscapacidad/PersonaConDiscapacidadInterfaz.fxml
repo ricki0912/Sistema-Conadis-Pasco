@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="1029.0" stylesheets="@personaConDiscapacidadInterfaz.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registro.personaConDiscapacidad.PersonaConDiscapacidadControler">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+               <left>
+                  <Label text="Lista de Personas con Discapacidad" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </left>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </BorderPane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+   <top>
+      <BorderPane id="borderPaneContenedorBusqueda" fx:id="borderPaneContenedorBusqueda" prefHeight="47.0" prefWidth="1050.0" BorderPane.alignment="CENTER">
+         <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="220.0" spacing="1.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField id="textFieldBuscar" fx:id="textFieldBuscar" />
+                  <Button id="ButtonBuscar" fx:id="ButtonBuscar" mnemonicParsing="false" prefHeight="41.0" prefWidth="43.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </right>
+         <left>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="162.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton id="jFXButtonNuevoRegistro" fx:id="jFXButtonNuevoRegistro" prefHeight="17.0" prefWidth="162.0" text="Nuevo Registro">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </left>
+      </BorderPane>
+   </top>
+</BorderPane>

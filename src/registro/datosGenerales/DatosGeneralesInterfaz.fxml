@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="1029.0" stylesheets="@datosGeneralesInterfaz.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registro.datosGenerales.DatosGeneralesControler">
+   <center>
+      <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+                     <left>
+                        <Label text="Tipo de Procedencia" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Cambria Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </left>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <right>
+                        <JFXButton fx:id="jFXButtonAgregarTipoProcedencia" text="Agregar" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="15" text="" textAlignment="CENTER" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </right>
+                  </BorderPane>
+               </top>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <TableView fx:id="tableViewTipoProcedencia" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="tableViewTipoProcedencia_Nro" prefWidth="41.0" text="Nro" />
+                              <TableColumn fx:id="tableViewTipoProcedencia_Nombre" prefWidth="170.0" text="Nombre" />
+                              <TableColumn fx:id="tableViewTipoProcedencia_Cod_Estadistico" prefWidth="131.0" text="Cod. Estadistico" />
+                              <TableColumn fx:id="tableViewTipoProcedencia_Descripcion" prefWidth="97.0" text="Descripción" />
+                              <TableColumn fx:id="tableViewTipoProcedencia_Opciones" prefWidth="97.0" text="Opciones" />
+                           </columns>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <top>
+                  <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal1" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+                     <left>
+                        <Label text="Tipo de Via" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Cambria Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </left>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <right>
+                        <JFXButton fx:id="jFXButtonAgregarTipoVia" text="Agregar" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="15" text="" textAlignment="CENTER" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </right>
+                  </BorderPane>
+               </top>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <TableView fx:id="tableViewTipoVia" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="tableViewTipoVia_Nro" prefWidth="41.0" text="Nro" />
+                              <TableColumn fx:id="tableViewTipoVia_Nombre" prefWidth="191.0" text="Nombre" />
+                              <TableColumn fx:id="tableViewTipoVia_Cod_Estadistico" prefWidth="96.0" text="Cod. Estadistico" />
+                              <TableColumn fx:id="tableViewTipoVia_Descripcion" prefWidth="183.0" text="Descripción" />
+                              <TableColumn fx:id="tableViewTipoVia_Opciones" prefWidth="97.0" text="Opciones" />
+                           </columns>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <top>
+                  <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal11" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+                     <left>
+                        <Label text="Tipo de Trabajo" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Cambria Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </left>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <right>
+                        <JFXButton fx:id="jFXButtonAgregarTipoTrabajo" text="Agregar" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="15" text="" textAlignment="CENTER" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </right>
+                  </BorderPane>
+               </top>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <TableView fx:id="tableViewTipoTrabajo" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="tableViewTipoTrabajo_Nro" prefWidth="41.0" text="Nro" />
+                              <TableColumn fx:id="tableViewTipoTrabajo_Nombre" prefWidth="191.0" text="Nombre" />
+                              <TableColumn fx:id="tableViewTipoTrabajo_Cod_Estadistico" prefWidth="96.0" text="Cod. Estadistico" />
+                              <TableColumn fx:id="tableViewTipoTrabajo_Descripcion" prefWidth="183.0" text="Descripción" />
+                              <TableColumn fx:id="tableViewTipoTrabajo_Opciones" prefWidth="97.0" text="Opciones" />
+                           </columns>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <top>
+                  <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal12" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+                     <left>
+                        <Label text="Programa Social" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Cambria Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </left>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <right>
+                        <JFXButton fx:id="jFXButtonAgregarProgramaSocial" text="Agregar" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="15" text="" textAlignment="CENTER" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </right>
+                  </BorderPane>
+               </top>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <TableView fx:id="tableViewProgramaSocial" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="tableViewProgramaSocial_Nro" prefWidth="41.0" text="Nro" />
+                              <TableColumn fx:id="tableViewProgramaSocial_Nombre" prefWidth="191.0" text="Nombre" />
+                              <TableColumn fx:id="tableViewProgramaSocial_Cod_Estadistico" prefWidth="96.0" text="Cod. Estadistico" />
+                              <TableColumn fx:id="tableViewProgramaSocial_Descripcion" prefWidth="183.0" text="Descripción" />
+                              <TableColumn fx:id="tableViewProgramaSocial_opciones" prefWidth="97.0" text="Opciones" />
+                           </columns>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

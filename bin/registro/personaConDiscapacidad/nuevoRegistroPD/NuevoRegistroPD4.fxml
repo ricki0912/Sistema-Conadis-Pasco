@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registro.personaConDiscapacidad.nuevoRegistroPD.NuevoRegistroPDControler">
+   <children>
+      <AnchorPane id="anchorPaneModalNuevoRegistroPD" fx:id="anchorPaneModalNuevoRegistroPD" layoutX="22.0" layoutY="35.0" prefHeight="1464.0" prefWidth="1049.0" stylesheets="@nuevoRegistroPD.css">
+         <children>
+            <BorderPane id="borderPaneTituloNuevoRegistroPD" fx:id="borderPaneTituloNuevoRegistroPD" prefHeight="30.0" prefWidth="393.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <Label id="labelTituloNuevoRegistroPD" fx:id="labelTituloNuevoRegistroPD" text="Nuevo Registro de Persona con Discapacidad" BorderPane.alignment="CENTER" />
+               </left>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <right>
+                  <JFXButton id="jFXButtonClose" fx:id="jFXButtonClose" prefHeight="14.0" prefWidth="38.0" text="x" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+            <ScrollPane fx:id="scrollPaneContenedor" fitToWidth="true" layoutY="37.0" prefHeight="995.0" prefWidth="1012.0" AnchorPane.bottomAnchor="-78.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+              <content>
+                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1491.0" prefWidth="1034.0">
+            <children>
+                        <GridPane id="gridPaneDatosPersonales" layoutX="45.0" layoutY="46.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="300.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647">
+                                 <left>
+                  <Label prefHeight="17.0" prefWidth="148.0" style="-fx-background-color: #cc99cc;" text="Datos Personales:" textFill="#2a1f80" BorderPane.alignment="CENTER">
+                  <font>
+                  <Font name="Arial Bold" size="16.0" />
+                  </font>
+                  </Label>
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <bottom>
+                                    <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                 </bottom>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label alignment="BOTTOM_LEFT" text="Ap. Paterno:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                  <TextField id="textFieldApellPaterno" fx:id="textFieldApellPaterno" prefHeight="25.0" prefWidth="188.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <center>
+                                    <TextField id="textFieldApellMaterno" fx:id="textFieldApellMaterno" prefHeight="25.0" prefWidth="188.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label text="Ap. Materno" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label text="Nombres" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                  <TextField id="textFieldApellNombres" fx:id="textFieldApellNombres" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label text="Sexo" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <HBox id="hBoxSexo" fx:id="hBoxSexo" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                       <children>
+                        <CheckBox id="checkBoxMasculino" fx:id="checkBoxMasculino" mnemonicParsing="false" text="Maculino" />
+                        <CheckBox id="checkBoxFemenino" fx:id="checkBoxFemenino" mnemonicParsing="false" text="Femenino" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label alignment="BASELINE_RIGHT" text="Doc. Identidad" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="6.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <RadioButton id="RadioButtonDNI" fx:id="RadioButtonDNI" mnemonicParsing="false" text="DNI:">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="toggleGroupDocId" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton id="RadioButtonCUI" fx:id="RadioButtonCUI" mnemonicParsing="false" text="CUI:" toggleGroup="$toggleGroupDocId" />
+                        <TextField id="textFieldDocId" fx:id="textFieldDocId" prefHeight="25.0" prefWidth="138.0" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label text="Fecha de Nacimien (Día/Mes/Año):" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <DatePicker id="datePickerFechaNacimiento" fx:id="datePickerFechaNacimiento" prefHeight="25.0" prefWidth="348.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label text="Nivel Educativo:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                  <ComboBox id="comboBoxNivelEducativo" fx:id="comboBoxNivelEducativo" prefHeight="25.0" prefWidth="338.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label text="Tipo Trabajo:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                 <center>
+                                    <ComboBox id="comboBoxTipoTrabajo" fx:id="comboBoxTipoTrabajo" prefHeight="25.0" prefWidth="338.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                                    <Label text="Programa Social:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <center>
+                                    <ComboBox id="comboBoxTipoTrabajo" fx:id="comboBoxTipoTrabajo1" prefHeight="25.0" prefWidth="338.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                                    <Label text="Estado Civil:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <ComboBox id="comboBoxNivelEducativo" fx:id="comboBoxNivelEducativo1" prefHeight="25.0" prefWidth="338.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                                    <Label text="Numero de Celular:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                                    <Label text="E-Mail:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <TextField id="textFieldApellNombres" fx:id="textFieldApellNombres1" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <TextField id="textFieldApellNombres" fx:id="textFieldApellNombres11" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                                    <Label alignment="BOTTOM_LEFT" text="Observación" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="8">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+                        <GridPane id="gridPaneDatosDomicilio" layoutX="9.0" layoutY="179.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="400.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label prefHeight="20.0" prefWidth="161.0" style="-fx-background-color: #cc99cc;" text="Datos De Domicilio:" textFill="#2a1f80" BorderPane.alignment="CENTER">
+                  <font>
+                  <Font name="Arial Bold" size="16.0" />
+                  </font>
+                  </Label>
+                                 </left>
+                                 <bottom>
+                                    <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                 </bottom>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label text="Región:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <center>
+                                    <ComboBox id="comboBoxRegion" fx:id="comboBoxRegion" prefHeight="25.0" prefWidth="338.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label text="Provincia:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <center>
+                                    <ComboBox id="comboBoxProvincia" fx:id="comboBoxProvincia" prefHeight="25.0" prefWidth="338.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label text="Distrito:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <center>
+                                    <ComboBox id="comboBoxDistrito" fx:id="comboBoxDistrito" prefHeight="25.0" prefWidth="338.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label text="Tipo de Via:" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <center>
+                                    <ComboBox id="comboBoxTipoVia" fx:id="comboBoxTipoVia" prefHeight="25.0" prefWidth="338.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Nombre de Vía" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <center>
+                                    <TextField id="textFieldNombreVia" fx:id="textFieldNombreVia" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Nro." BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <center>
+                                    <TextField id="textFieldNroDatosDomicilio" fx:id="textFieldNroDatosDomicilio" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                 <left>
+                                    <Label text="Edificio" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                 <center>
+                                    <TextField id="textFieldEdificioDatosDomicilio" fx:id="textFieldEdificioDatosDomicilio" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <left>
+                                    <Label text="Dpto/Int" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <center>
+                                    <TextField id="textFieldDpto_IntDatosDomicilio" fx:id="textFieldDpto_IntDatosDomicilio" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <left>
+                                    <Label text="Mz." BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <left>
+                                    <Label text="Lote" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+                                 <left>
+                                    <Label text="Etapa" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Nombre de Procedencia" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                 <center>
+                                    <TextField id="textFieldMzDatosDomicilio" fx:id="textFieldMzDatosDomicilio" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                 <center>
+                                    <TextField id="textFieldLoteDatosDomicilio" fx:id="textFieldLoteDatosDomicilio" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
+                                 <center>
+                                    <TextField id="textFieldEtapaDatosDomicilio" fx:id="textFieldEtapaDatosDomicilio" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <center>
+                                    <TextField id="textFieldUrb_AAHH_CP_PJ_OtroDatosDomicilio" fx:id="textFieldUrb_AAHH_CP_PJ_OtroDatosDomicilio" prefHeight="25.0" prefWidth="264.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Procedencia" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <center>
+                                    <ComboBox id="comboBoxRegion" fx:id="comboBoxEntorno" prefHeight="25.0" prefWidth="338.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+                        <GridPane id="gridPaneDatosDiscapacidad" layoutY="547.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="700.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <left>
+                  <Label prefHeight="20.0" prefWidth="201.0" style="-fx-background-color: #cc99cc;" text="Datos De Discapacidad:" textFill="#2a1f80" BorderPane.alignment="CENTER">
+                  <font>
+                  <Font name="Arial Bold" size="16.0" />
+                  </font>
+                  </Label>
+                                 </left>
+                                 <bottom>
+                                    <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                 </bottom>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Tipo de Discapacidad:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <CheckComboBox fx:id="checkComboBoxTipoDiscapacidad" prefHeight="25.0" prefWidth="252.0" />
+                                          <JFXButton alignment="CENTER" prefHeight="25.0" prefWidth="25.0" text=" ">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#28282f" fontSmoothingType="LCD" glyphName="PLUS" size="16" textAlignment="CENTER" wrappingWidth="7.714285850524902" />
+                                             </graphic>
+                                             <font>
+                                                <Font size="1.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Diagnóstico Medico (Si lo conoce):" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <TextField id="textFieldDiagnosticoMedico" fx:id="textFieldDiagnosticoMedico" prefHeight="25.0" prefWidth="252.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Tipo de Ayuda biometrica usada:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <CheckComboBox fx:id="checkComboBoxTipoAyudaBiometrica" prefHeight="25.0" prefWidth="215.0" />
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Tipo de Seguro Medico:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <CheckComboBox fx:id="checkComboBoxTipoSeguroMedico" prefHeight="25.0" prefWidth="194.0" />
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="¿Qué limitación permanente tiene?:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <CheckComboBox fx:id="chekcComboBoxLimitacionPermanente" prefHeight="25.0" prefWidth="255.0" />
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Nivel de gravedad - Discapacidad:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Origen de la Limitación:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <ComboBox id="comboBoxNivelGravedad" fx:id="comboBoxNivelGravedad" prefHeight="25.0" prefWidth="319.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <ComboBox id="comboBoxOrigenLimitacion" fx:id="comboBoxOrigenLimitacion" prefHeight="25.0" prefWidth="244.0" />
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+                        <GridPane id="gridPaneDatosCertificacion" layoutY="870.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="910.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="251.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="401.0" minWidth="10.0" prefWidth="250.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="361.0" minWidth="10.0" prefWidth="266.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="229.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <left>
+                                    <Label prefHeight="20.0" prefWidth="295.0" style="-fx-background-color: #cc99cc;" text="Datos De Certificación (Acreditación):" textFill="#2a1f80" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </left>
+                                 <bottom>
+                                    <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                 </bottom>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Nro Certificado" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <TextField id="textFieldDiagnosticoMedico" fx:id="textFieldDiagnosticoMedico1" prefHeight="25.0" prefWidth="252.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Diagnostico de Daño (CIE)" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <CheckComboBox fx:id="checkComboBoxTipoAyudaBiometrica1" prefHeight="25.0" prefWidth="215.0" />
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Nivel de gravedad - Discapacidad:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <CheckComboBox fx:id="checkComboBoxTipoSeguroMedico1" prefHeight="25.0" prefWidth="194.0" />
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Requerimiento de Apoyo " BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <CheckComboBox fx:id="chekcComboBoxLimitacionPermanente1" prefHeight="25.0" prefWidth="255.0" />
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Restricción en la Participación (%):" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Fecha de Emisión de Certificado:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <TextField BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Observación y/o Recomendaciones" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="3">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <TextArea prefHeight="87.0" prefWidth="220.0" wrapText="true" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <DatePicker prefHeight="25.0" prefWidth="283.0" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                 <left>
+                                    <Label text="Establecimiento de Salud:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <left>
+                                    <Label text="Director del Establecimiento:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <left>
+                                    <Label text="Medico Certificador:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <ComboBox id="comboBoxNivelGravedad" fx:id="comboBoxNivelGravedad1" prefHeight="25.0" prefWidth="319.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <ComboBox id="comboBoxNivelGravedad" fx:id="comboBoxNivelGravedad11" prefHeight="25.0" prefWidth="319.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <ComboBox id="comboBoxNivelGravedad" fx:id="comboBoxNivelGravedad111" prefHeight="25.0" prefWidth="319.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+                        <GridPane id="gridPaneInscripcionConadis" layoutX="1.0" layoutY="1130.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1170.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="10.0" prefWidth="254.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="397.0" minWidth="10.0" prefWidth="247.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.0" minWidth="10.0" prefWidth="270.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="228.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <left>
+                                    <Label prefHeight="20.0" prefWidth="335.0" style="-fx-background-color: #cc99cc;" text="Inscripción Conadis (Carné y Resolución):" textFill="#2a1f80" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </left>
+                                 <bottom>
+                                    <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                 </bottom>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Nro de Carné" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <TextField id="textFieldDiagnosticoMedico" fx:id="textFieldDiagnosticoMedico2" prefHeight="25.0" prefWidth="252.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Fecha de Emisión de Resolución:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <DatePicker prefHeight="25.0" prefWidth="286.0" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Nro de Resolucion:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <TextField id="textFieldDiagnosticoMedico" fx:id="textFieldDiagnosticoMedico21" prefHeight="25.0" prefWidth="252.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Se resuelve:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TextField prefHeight="25.0" prefWidth="565.0" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+                        <Label id="labelInformacion" fx:id="labelInformacion" contentDisplay="CENTER" layoutX="1.0" layoutY="1383.0" prefHeight="50.0" prefWidth="984.0" text="Texto" textAlignment="CENTER" textFill="#25b2f8" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+            <Button id="buttonValidar" fx:id="buttonValidar" layoutX="939.0" layoutY="1454.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Validar" textAlignment="CENTER" AnchorPane.rightAnchor="0.0" />
+            <Button id="buttonCancelar" fx:id="buttonCancelar" layoutX="801.0" layoutY="1454.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Cancelar" textAlignment="CENTER" />
+                        <Label layoutX="657.0" layoutY="1485.0" />
+                        <GridPane id="gridPaneDatosDiscapacidad" layoutX="10.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <left>
+                                    <Label prefHeight="20.0" prefWidth="201.0" style="-fx-background-color: #cc99cc;" text="Tramite:" textFill="#2a1f80" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </left>
+                                 <bottom>
+                                    <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                 </bottom>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Fecha de Registro:" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <center>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <DatePicker prefHeight="25.0" prefWidth="271.0" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Tipo de Tramite: " BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <ComboBox prefHeight="25.0" prefWidth="370.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <left>
+                                    <Label text="Motivo del trámite: " BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Inscripción en el CONADIS" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <center>
+                                    <HBox id="hBoxTieneInscripcionConadis" fx:id="hBoxTieneInscripcionConadis" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <CheckBox mnemonicParsing="false" text="Si" />
+                                          <CheckBox mnemonicParsing="false" text="No" />
+                                          <CheckBox mnemonicParsing="false" text="En tramite" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <left>
+                                    <Label text="Tiene Certificado de Discapacidad" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <HBox id="hBoxTieneCertificadoDiscapacidad" fx:id="hBoxTieneCertificadoDiscapacidad" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <CheckBox mnemonicParsing="false" text="Si" />
+                                          <CheckBox mnemonicParsing="false" text="No" />
+                                          <CheckBox mnemonicParsing="false" text="En tramite" />
+                                       </children>
+                                    </HBox>
+                                 </center>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <center>
+                                    <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+            </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+            </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

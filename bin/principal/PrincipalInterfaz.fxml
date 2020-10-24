@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="877.0" stylesheets="@principalInterfaz.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.PrincipalControler">
+   <children>
+      <StackPane layoutX="7.0" layoutY="73.0" prefHeight="516.0" prefWidth="852.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+      <BorderPane prefHeight="36.0" prefWidth="797.0" BorderPane.alignment="CENTER">
+         <center>
+            <ToolBar prefHeight="50.0" prefWidth="655.0" style="-fx-background-color: #b80404;" BorderPane.alignment="CENTER">
+               <items>
+                              <FontAwesomeIconView fx:id="imageViewMenu" fill="WHITE" glyphName="BARS" size="35" textAlignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIconView>
+                  <Separator orientation="VERTICAL" prefHeight="40.0" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo-oci.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Conadis" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="25.0" />
+                     </font>
+                  </Label>
+               </items>
+            </ToolBar>
+         </center>
+         <right>
+            <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="188.0" style="-fx-background-color: #b80404;" BorderPane.alignment="CENTER_RIGHT">
+              <items>
+                  <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" style="-fx-background-color: #b80404;" textFill="#0a0a0a">
+                    <items>
+                      <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <AnchorPane prefHeight="131.0" prefWidth="154.0">
+                                 <children>
+                                    <Circle id="circleFotoPerfilGrande" fx:id="circleFotoPerfilGrande" fill="#1f93ff" layoutX="82.0" layoutY="66.0" radius="54.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                 </children>
+                              </AnchorPane>
+                           </graphic>
+                        </MenuItem>
+                      <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <BorderPane prefHeight="19.0" prefWidth="154.0">
+                                 <center>
+                                    <Button id="buttonSalir" fx:id="buttonSalir" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Salir" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="Arial" size="12.0" />
+                                                   </font></Button>
+                                 </center>
+                              </BorderPane>
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                     <graphic>
+                        <AnchorPane prefHeight="32.0" prefWidth="187.0">
+                           <children>
+                              <Circle id="CircleFotoPerfil" fx:id="CircleFotoPerfil" fill="DODGERBLUE" layoutX="29.0" layoutY="16.0" radius="18.0" stroke="#1088eb00" strokeType="INSIDE" />
+                              <Label id="labelNombreUsuario" fx:id="labelNombreUsuario" layoutX="47.0" layoutY="1.0" prefHeight="17.0" prefWidth="90.0" text="Label" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                                 </font></Label>
+                              <Label id="labelCargoUsuario" fx:id="labelCargoUsuario" layoutX="47.0" layoutY="14.0" prefHeight="17.0" prefWidth="90.0" text="Label" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </graphic>
+                  </MenuButton>
+              </items>
+            </ToolBar>
+         </right>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane id="borderPane_ventanaInterna" fx:id="borderPane_ventanaInterna" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+      <StackPane id="stackPaneFodoSemiTransparente" fx:id="stackPaneFodoSemiTransparente" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane fx:id="stackPaneCargando" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="556.0" prefWidth="184.0">
+                     <children>
+                        <ProgressIndicator prefHeight="181.0" prefWidth="184.0" />
+                        <Label text="Cargando..." textFill="#0075eb">
+                           <font>
+                              <Font name="Arial Narrow" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+      <StackPane id="stackPnaeLateralOpciones" fx:id="stackPnaeLateralOpciones" prefHeight="556.0" prefWidth="211.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+<BorderPane id="borderPaneLateralOpciones" fx:id="borderPaneLateralOpciones" prefHeight="200.0" prefWidth="188.0" style="-fx-background-color: #ee1a1a;">
+   <center>
+      <ScrollPane id="scrollPaneLateralOpciones" fx:id="scrollPaneLateralOpciones" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" pannable="true" prefWidth="200.0" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="vBoxMenu" prefWidth="188.0" style="-fx-background-color: #b80404;">
+               <children>
+                  <AnchorPane prefHeight="135.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="109.0" fitWidth="185.0" layoutX="12.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo_conadis.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                              <Separator prefWidth="200.0">
+                                 <padding>
+                                    <Insets left="15.0" right="15.0" />
+                                 </padding>
+                              </Separator>
+                  <ToggleButton id="toggleButtonInicio" fx:id="toggleButtonInicio" mnemonicParsing="false" prefHeight="50.0" prefWidth="2011.0" selected="true">
+                     <graphic>
+                        <AnchorPane cacheShape="false" prefHeight="36.0" prefWidth="167.0">
+                           <children>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="30" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="5.0" />
+                              <Label layoutX="48.0" layoutY="15.0" text="Inicio" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </graphic>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroupOpcionesLateral" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton id="toggleButtonRegistro" fx:id="toggleButtonRegistro" mnemonicParsing="false" prefHeight="41.0" prefWidth="211.0" toggleGroup="$toggleGroupOpcionesLateral">
+                     <graphic>
+                        <AnchorPane cacheShape="false" prefHeight="36.0" prefWidth="167.0">
+                           <children>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="PENCIL" size="30" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Label layoutX="48.0" layoutY="15.0" text="Registro" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </graphic>
+                  </ToggleButton>
+                              <ToggleButton id="toggleButtonEstadistica" fx:id="toggleButtonEstadistica" mnemonicParsing="false" prefHeight="41.0" prefWidth="211.0" toggleGroup="$toggleGroupOpcionesLateral">
+                                 <graphic>
+                                    <AnchorPane cacheShape="false" prefHeight="36.0" prefWidth="167.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" layoutX="14.0" layoutY="36.0" size="30" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                                          <Label layoutX="48.0" layoutY="15.0" text="Estadistica" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </AnchorPane>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton id="toggleButtonRegistro" fx:id="toggleButtonGestMedicoCert" mnemonicParsing="false" prefHeight="41.0" prefWidth="211.0" toggleGroup="$toggleGroupOpcionesLateral">
+                                 <graphic>
+                                    <AnchorPane cacheShape="false" prefHeight="36.0" prefWidth="167.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="USER_MD" size="30" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                                          <Label layoutX="48.0" layoutY="15.0" text="Gest. Medico Cert." textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </AnchorPane>
+                                 </graphic>
+                              </ToggleButton>
+                  <ToggleButton id="toggleButtonPersonal" fx:id="toggleButtonPersonal" mnemonicParsing="false" prefHeight="41.0" prefWidth="211.0" toggleGroup="$toggleGroupOpcionesLateral">
+                     <graphic>
+                        <AnchorPane cacheShape="false" prefHeight="36.0" prefWidth="167.0">
+                           <children>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="GROUP" layoutX="25.0" layoutY="29.0" size="30" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Label layoutX="48.0" layoutY="15.0" text="Personal" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton id="toggleButtonPerfil" fx:id="toggleButtonPerfil" mnemonicParsing="false" prefHeight="41.0" prefWidth="211.0" toggleGroup="$toggleGroupOpcionesLateral">
+                     <graphic>
+                        <AnchorPane cacheShape="false" prefHeight="36.0" prefWidth="167.0">
+                           <children>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="15.0" layoutY="37.0" size="30" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Label layoutX="48.0" layoutY="15.0" text="Perfil" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton id="toggleButtonAcercaDe" fx:id="toggleButtonAcercaDe" mnemonicParsing="false" prefHeight="41.0" prefWidth="211.0" toggleGroup="$toggleGroupOpcionesLateral">
+                     <graphic>
+                        <AnchorPane cacheShape="false" prefHeight="33.0" prefWidth="164.0">
+                           <children>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="AT" size="30" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Label layoutX="48.0" layoutY="15.0" text="Acerca de " textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </graphic>
+                  </ToggleButton>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="1029.0" stylesheets="@personaConDiscapacidadInterfaz.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registro.personaConDiscapacidad.PersonaConDiscapacidadControler">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+               <left>
+                  <Label text="Lista de Personas con Discapacidad" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </left>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </BorderPane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <TableView fx:id="tableViewPerDiscapacidad" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn prefWidth="111.0" text="Datos Personales">
+                           <columns>
+                            <TableColumn fx:id="tableColumnDNI_CUI" maxWidth="70.0" minWidth="59.0" text="DNI/CUI" />
+                            <TableColumn fx:id="tableColumnApellidosYNombres" prefWidth="227.0" text="Apellidos y Nombres" />
+                              <TableColumn fx:id="tableColumnEdad" maxWidth="50.0" minWidth="40.0" prefWidth="44.0" text="Edad" />
+                              <TableColumn fx:id="tableColumnSexo" prefWidth="76.0" text="Sexo" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="128.0" text="Datos de Domicilio">
+                           <columns>
+                              <TableColumn fx:id="tableColumnProvincia" text="Provincia" />
+                              <TableColumn fx:id="tableColumnDistrito" text="Distrito" />
+                              <TableColumn fx:id="tableColumnNombreVia" prefWidth="200.0" text="Nombre de Via" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="128.0" text="Datos de Discapacidad">
+                           <columns>
+                              <TableColumn fx:id="tableColumnTipoDiscapacidad" prefWidth="165.0" text="Tipo" />
+                              <TableColumn fx:id="tableColumnNivelGravedadDiscapacidad" prefWidth="102.0" text="Nivel de Gravedad" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="300.0" text="Datos de Certificado Dis.">
+                           <columns>
+                              <TableColumn fx:id="tableColumnTiieneCertificadoDiscapacidad" maxWidth="50.0" prefWidth="50.0" text="Tiene" />
+                              <TableColumn fx:id="tableColumnNumeroCertificadoDiscapacidad" maxWidth="300.0" prefWidth="100.0" text="Número" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="300.0" text="Datos de Resolución y Carné">
+                           <columns>
+                              <TableColumn fx:id="tableColumnTiieneInscripcionConNac" maxWidth="50.0" prefWidth="50.0" text="Tiene" />
+                              <TableColumn fx:id="tableColumnNumeroCarne" maxWidth="300.0" prefWidth="70.0" text="Nro Carné" />
+                              <TableColumn fx:id="tableColumnNumeroResolucion" maxWidth="300.0" prefWidth="130.0" text="Nro Resolución" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="tableColumnObservacion" prefWidth="100.0" text="Observación" />
+                        <TableColumn fx:id="tableColumnOpciones" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Opciones" />
+                    </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+   <top>
+      <BorderPane id="borderPaneContenedorBusqueda" fx:id="borderPaneContenedorBusqueda" prefHeight="47.0" prefWidth="1050.0" BorderPane.alignment="CENTER">
+         <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="349.0" spacing="1.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ProgressIndicator fx:id="progressIndicatorMostrarDatosPerDiscapacidad" prefHeight="37.0" prefWidth="48.0" visible="false" />
+                  <TextField id="textFieldBuscar" fx:id="textFieldBuscar" prefHeight="25.0" prefWidth="250.0" promptText="Buscar por DNI, CUI Apellidos y Nombres" />
+                  <Button id="ButtonBuscar" fx:id="ButtonBuscar" mnemonicParsing="false" prefHeight="41.0" prefWidth="43.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </right>
+         <left>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="181.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton id="jFXButtonNuevoRegistro" fx:id="jFXButtonNuevoRegistro" prefHeight="45.0" prefWidth="169.0" text="Nuevo Registro">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="25" />
+                     </graphic></JFXButton>
+               </children>
+            </HBox>
+         </left>
+      </BorderPane>
+   </top>
+</BorderPane>

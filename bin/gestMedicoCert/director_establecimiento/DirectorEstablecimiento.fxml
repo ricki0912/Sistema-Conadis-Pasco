@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="1029.0" stylesheets="@directorEstablecimiento.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestMedicoCert.director_establecimiento.DirectorEstablecimientoControler">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+               <left>
+                  <Label text="Lista de Directores de Establecimientos de Salud" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </left>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </BorderPane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <TableView fx:id="tableViewDirector" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="tableColumnNro" maxWidth="70.0" minWidth="49.0" prefWidth="50.0" text="Nro" />
+                        <TableColumn fx:id="tableColumnDNI" maxWidth="87.0" minWidth="49.0" prefWidth="87.0" text="DNI" />
+                        <TableColumn fx:id="tableColumnCMP" maxWidth="87.0" minWidth="49.0" prefWidth="56.0" text="CMP" />
+                        <TableColumn fx:id="tableColumnRNE" maxWidth="87.0" minWidth="49.0" prefWidth="56.0" text="RNE" />
+                      <TableColumn fx:id="tableColumnNombresApellidos" prefWidth="245.0" text="Nombres y Apellidos" />
+                        <TableColumn fx:id="tableColumnEspecialidad" maxWidth="471.0" minWidth="40.0" prefWidth="158.0" text="Especialidad" />
+                        <TableColumn fx:id="tableColumnEstSalud" prefWidth="459.0" text="Establecimiento de Salud" />
+                        <TableColumn fx:id="tableColumnOpciones" maxWidth="462.0" minWidth="0.0" prefWidth="110.0" text="Opciones" />
+                    </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+   <top>
+      <BorderPane id="borderPaneContenedorBusqueda" fx:id="borderPaneContenedorBusqueda" prefHeight="47.0" prefWidth="1050.0" BorderPane.alignment="CENTER">
+         <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="349.0" spacing="1.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ProgressIndicator fx:id="progressIndicatorMostrarDatosPerDiscapacidad" prefHeight="37.0" prefWidth="48.0" visible="false" />
+                  <TextField id="textFieldBuscar" fx:id="textFieldBuscar" prefHeight="25.0" prefWidth="250.0" promptText="Buscar por Nombres, DNI, CMP o RNE" />
+                  <Button id="ButtonBuscar" fx:id="ButtonBuscar" mnemonicParsing="false" prefHeight="41.0" prefWidth="43.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </right>
+         <left>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="181.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton id="jFXButtonNuevoRegistro" fx:id="jFXButtonNuevoDirector" prefHeight="45.0" prefWidth="169.0" text="Nuevo Director">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BLACK_TIE" size="25" />
+                     </graphic></JFXButton>
+               </children>
+            </HBox>
+         </left>
+      </BorderPane>
+   </top>
+</BorderPane>

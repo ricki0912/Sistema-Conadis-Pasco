@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="834.0" stylesheets="@estadisticaBusquedaAvanzada.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estadistica.busquedaAvanzada.EstadisticaBusquedaAvanzadaControler">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <BorderPane id="borderPaneGraficaProvincia" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <BorderPane id="borderPaneDatosPersonal" fx:id="borderPaneDatosPersonal11" prefHeight="25.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+                     <left>
+                        <Label text="Busqueda Avanzada..." textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Cambria Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </left>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </BorderPane>
+               </top>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <BorderPane prefHeight="118.0" prefWidth="829.0" BorderPane.alignment="CENTER">
+                           <top>
+                              <BorderPane prefHeight="28.0" prefWidth="829.0" BorderPane.alignment="CENTER">
+                                 <left>
+                                    <Label text="Consulta SQL (MySQL)" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                           </top>
+                           <center>
+                              <TextArea fx:id="textAreaConsultaSQL" prefHeight="55.0" prefWidth="829.0" wrapText="true" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextArea>
+                           </center>
+                           <bottom>
+                              <BorderPane prefHeight="39.0" prefWidth="829.0" BorderPane.alignment="CENTER">
+                                 <right>
+                                    <JFXButton fx:id="FXButtonEjecutar" style="-fx-background-color: #0b7dda;" text="Ejecutar" textFill="WHITE" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </right>
+                                 <left>
+                                    <Label fx:id="labelInformacion" prefHeight="24.0" prefWidth="753.0" text="Label" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="Arial Narrow" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </left>
+                              </BorderPane>
+                           </bottom>
+                        </BorderPane>
+                     </top>
+                     <center>
+                        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                          <tabs>
+                            <Tab fx:id="tabPaneConsulta" text="Consulta">
+                                 <content>
+                                    <BorderPane fx:id="borderPaneConsulta" prefHeight="200.0" prefWidth="200.0">
+                                       <bottom>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="829.0" spacing="2.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <JFXButton fx:id="jFXButtonExportarExcel" style="-fx-background-color: #0b7dda;" text="Exportar Excel" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </HBox>
+                                       </bottom></BorderPane>
+                                 </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
